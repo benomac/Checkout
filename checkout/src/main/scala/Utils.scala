@@ -23,11 +23,11 @@ object Utils {
 
   def removeInvalidItems (items: String, products: Map[Char, Price]): String = {
       val valid = for (item <- items) yield {
-          if(!products.keySet.contains(item)) {
+          if(!products.keySet.contains(item.toLower)) {
               println(item  + " is an invalid item")
               ""
           } else {
-              item
+              item.toLower
           }
       }
       valid.mkString("")

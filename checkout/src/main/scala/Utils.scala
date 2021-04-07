@@ -72,7 +72,7 @@ object Utils {
           Map.empty
         } else { 
           val x = Price(i(1).toInt, i(2).toInt, i(3).toInt)
-          Map(i(0)(0) -> x)
+          Map(i(0)(0).toLower -> x)
         } 
       } yield isValid
     newItemsMap.flatten.toMap

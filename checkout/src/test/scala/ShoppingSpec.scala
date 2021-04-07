@@ -1,7 +1,7 @@
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 import Main._
-import Yoots._
+import Utils._
 
 class ShoppingSpec extends AnyFlatSpec with Matchers {
     

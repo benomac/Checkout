@@ -1,6 +1,6 @@
 import Main._
 
-object Yoots {
+object Utils {
     
   case class Price (price: Int, numForDeal: Int, priceForDeal: Int)
   
@@ -64,11 +64,11 @@ object Yoots {
   }
 
   
-  def createTheNewItemsMap(arr: Array[Array[String]]): Map[Char,Yoots.Price] = {
+  def createTheNewItemsMap(arr: Array[Array[String]]): Map[Char, Utils.Price] = {
     val newItemsMap = for {
       i <- arr
         isValid = if (!(i.length == 4 && i(1).charAt(0).isDigit && i(2).charAt(0).isDigit && i(3).charAt(0).isDigit)) {
-          println("Item " + "'" + i(0).charAt(0) + "'" + " has been entered with the incorrect format!")
+          println("ERROR! An item has been entered with the incorrect format!")
           Map.empty
         } else { 
           val x = Price(i(1).toInt, i(2).toInt, i(3).toInt)
@@ -78,7 +78,7 @@ object Yoots {
     newItemsMap.flatten.toMap
   }
     
-  def decideWhichMapToUse(args: Array[String]): Map[Char,Yoots.Price] = {
+  def decideWhichMapToUse(args: Array[String]): Map[Char, Utils.Price] = {
     if(args.length == 0) {
       prices
     } else {

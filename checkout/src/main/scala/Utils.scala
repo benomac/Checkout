@@ -10,7 +10,7 @@ object Utils {
                     'd' -> Price(15, 0, 0))
 
   def priceForDeals (count: Int, products: Price): Int = {
-    (count / products.numForDeal) * products.priceForDeal
+    (count / products.numForDeal) * products.priceForDeal 
   }
 
   def priceForNoDeals (count: Int, products: Price): Int = {

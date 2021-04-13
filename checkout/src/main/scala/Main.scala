@@ -9,5 +9,6 @@ object Main extends App {
   val valid = removeInvalidItems(items, useThesePrices)
 
   println("Total " + total(valid, useThesePrices))
+  
 
 }

@@ -13,7 +13,7 @@ Implement the code for a supermarket checkout that calculates the total price of
 ```
 Item    Unit Price  Special Price
 a       50          3 for 130
-b      30          2 for 45
+b       30          2 for 45
 c       20
 d       15
 ```

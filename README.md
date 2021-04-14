@@ -8,7 +8,7 @@ The Kata is as follows:
 
 Checkout Kata
 
-Implement the code for a supermarket checkout that calculates the total price of a number of items. In a normal supermarket, things are identified using Stock Keeping Units, or SKUs. In our store, we’ll use individual letters of the alphabet (a, b, c, and so on as the SKUs). Our goods are priced individually. In addition, some items are multi-priced: buy n of them, and they’ll cost you y. For example, item ‘A’ might cost 50 pence individually, but this week we have a special offer: buy three ‘A’s and they’ll cost you £1.30. In fact this week’s prices are:
+Implement the code for a supermarket checkout that calculates the total price of a number of items. In a normal supermarket, things are identified using Stock Keeping Units, or SKUs. In our store, we’ll use individual letters of the alphabet (a, b, c, and so on as the SKUs). Our goods are priced individually. In addition, some items are multi-priced: buy n of them, and they’ll cost you y. For example, item ‘a’ might cost 50 pence individually, but this week we have a special offer: buy three ‘a’s and they’ll cost you £1.30. In fact this week’s prices are:
 
 ```
 Item    Unit Price  Special Price

@@ -1,5 +1,7 @@
 import Main._
 
+import scala.annotation.tailrec
+
 object Utils {
     
   case class Price (price: Int, numForDeal: Int, priceForDeal: Int)
@@ -21,18 +23,30 @@ object Utils {
     count * products.price
   }
 
-  def removeInvalidItems (items: String, products: Map[Char, Price]): String = {
-      val valid = for (item <- items) yield {
-          if(!products.keySet.contains(item.toLower)) {
-              println(item  + " is an invalid item")
-              ""
-          } else {
-              item.toLower
-          }
-      }
-      valid.mkString("")
-  }
+//  def removeInvalidItems (items: String, products: Map[Char, Price]): String = {
+//      val valid = for (item <- items) yield {
+//          if(!products.keySet.contains(item.toLower)) {
+//              println(item  + " is an invalid item")
+//              ""
+//          } else {
+//              item.toLower
+//          }
+//      }
+//      valid.mkString("")
+//  }
 
+  def removeInvalidItems (items: String, products: Map[Char, Price]): String = {
+    @tailrec
+    def rem (i: String, p: Map[Char, Price], acc: String): String = {
+      if (i == "") acc
+      else
+        if (p.keySet.contains(i.head)) rem(i.tail, p, acc + i.head)
+        else
+          rem(i.tail, p, acc)
+    }
+    rem(items, products, "")
+  }
+  // leave as for loop raher than recursive, for now!
   def createToBuyMap (items: String): Map[Char, Int] = {
       (for {
       x <- items

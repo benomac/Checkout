@@ -2,7 +2,7 @@
 
 Here is my interpretation of the solution for the **Checkout** Kata.
 
-This is my first project in **Scala**. I found learning a new launguage, while trying to complete this kata quite difficult at times, but in the end, it was a very rewarding challenge.
+This is my first project in **Scala**. I found learning a new language, while trying to complete this kata quite difficult at times, but in the end, it was a very rewarding challenge.
 
 The Kata is as follows:
 
